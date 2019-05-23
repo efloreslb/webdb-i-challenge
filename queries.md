@@ -20,6 +20,9 @@ SELECT * FROM Customers WHERE CustomerName  LIKE '%market%';
 
 ## add a customer record for _"The Shire"_, the contact name is _"Bilbo Baggins"_ the address is _"1 Hobbit-Hole"_ in _"Bag End"_, postal code _"111"_ and the country is _"Middle Earth"_.
 
+
+## STRETCH PROBLEMS ##
+
 ## update _Bilbo Baggins_ record so that the postal code changes to _"11122"_.
 
 ## list orders grouped by customer showing the number of orders per customer. _Rattlesnake Canyon Grocery_ should have 7 orders.
