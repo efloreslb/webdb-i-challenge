@@ -34,12 +34,25 @@ server.post('/', async (req, res) => {
    }
 })
 
-server.put('/', (req, res) => {
-
+server.put('/:id', async (req, res) => {
+   const { id } = req.params;
+   const { body } = req;
+   try {
+      const account = await db.update(id, body);
+      res.status(200).json(account);
+   } catch {
+      res.status(500).json({error: "There was an error updating the data"})
+   }
 })
 
-server.delete('/', (req, res) => {
-   
+server.delete('/:id', async (req, res) => {
+   const { id } = req.params;
+   try {
+      const account = await db.remove(id);
+      res.status(200).json(account);
+   } catch {
+      res.status(500).json({error: "There was an error deleting the data"})
+   }
 })
 
 module.exports = server;
